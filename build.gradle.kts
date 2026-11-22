@@ -139,7 +139,7 @@ dependencies {
     // ---- OneConfig v1 GUI integration ----------------------------------------------------
     // OneConfig is a separate Fabric mod loaded as a dependency. The MC node jar and the
     // api modules are compile-time dependencies; players must install OneConfig to run this.
-    modCompileOnly(libs.oneconfig.fabric)
+    compileOnly(libs.oneconfig.fabric)
     compileOnly(libs.oneconfig.config)
     compileOnly(libs.oneconfig.config.impl)
     compileOnly(libs.oneconfig.events)
