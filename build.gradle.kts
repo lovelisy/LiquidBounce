@@ -29,6 +29,7 @@ import org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation
 plugins {
     alias(libs.plugins.fabric.loom)
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.gradleGitProperties)
     alias(libs.plugins.detekt)
     alias(libs.plugins.nodeGradle)
@@ -134,6 +135,19 @@ dependencies {
     api(libs.fabric.loader)
     api(libs.fabric.api)
     api(libs.fabric.kotlin)
+
+    // ---- OneConfig v1 GUI integration ----------------------------------------------------
+    // OneConfig is a separate Fabric mod loaded as a dependency. The MC node jar and the
+    // api modules are compile-time dependencies; players must install OneConfig to run this.
+    modCompileOnly(libs.oneconfig.fabric)
+    compileOnly(libs.oneconfig.config)
+    compileOnly(libs.oneconfig.config.impl)
+    compileOnly(libs.oneconfig.events)
+    compileOnly(libs.oneconfig.notifications)
+    compileOnly(libs.oneconfig.utils)
+    compileOnly(libs.oneconfig.ui)
+    compileOnly(libs.polycompose.core)
+    // --------------------------------------------------------------------------------------
 
     // Mod menu
     api(libs.modmenu)

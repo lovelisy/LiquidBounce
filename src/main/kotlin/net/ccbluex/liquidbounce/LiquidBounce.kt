@@ -66,6 +66,7 @@ import net.ccbluex.liquidbounce.features.misc.FriendManager
 import net.ccbluex.liquidbounce.features.misc.proxy.ProxyManager
 import net.ccbluex.liquidbounce.features.module.ModuleManager
 import net.ccbluex.liquidbounce.features.spoofer.SpooferManager
+import net.ccbluex.liquidbounce.integration.oneconfig.OneConfigIntegration
 import net.ccbluex.liquidbounce.integration.backend.BrowserBackendManager
 import net.ccbluex.liquidbounce.integration.backend.BrowserSelectionScreen
 import net.ccbluex.liquidbounce.integration.interop.ClientInteropServer
@@ -308,6 +309,9 @@ object LiquidBounce : EventListener {
 
         AddonManager.registerCategories()
         AddonManager.initializeAddons()
+
+        // Expose all LiquidBounce modules in OneConfig's settings GUI
+        OneConfigIntegration.initialize()
     }
 
     /**

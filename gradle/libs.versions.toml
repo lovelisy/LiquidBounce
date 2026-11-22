@@ -43,6 +43,10 @@ viafabricplus = "5.1.1"
 immediatelyFast = "1.17.1+26.3-fabric"
 iris = "1.11.7+26.3-fabric"
 
+# OneConfig v1 GUI integration
+oneconfig = "1.9.1"
+polycompose = "3.0.0"
+
 # Kotlin
 # https://kotlinlang.org/releases.html
 kotlin = "2.4.20"
@@ -68,6 +72,16 @@ nodeGradle = "7.1.0"
 [libraries]
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
 fabric-loader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabric-loader" }
+
+# OneConfig v1 — GUI pages, settings and notifications (Fabric mod, loaded as a dependency)
+oneconfig-fabric = { group = "org.polyfrost.oneconfig", name = "26.3-fabric", version.ref = "oneconfig" }
+oneconfig-config = { group = "org.polyfrost.oneconfig", name = "config", version.ref = "oneconfig" }
+oneconfig-config-impl = { group = "org.polyfrost.oneconfig", name = "config-impl", version.ref = "oneconfig" }
+oneconfig-events = { group = "org.polyfrost.oneconfig", name = "events", version.ref = "oneconfig" }
+oneconfig-notifications = { group = "org.polyfrost.oneconfig", name = "notifications", version.ref = "oneconfig" }
+oneconfig-utils = { group = "org.polyfrost.oneconfig", name = "utils", version.ref = "oneconfig" }
+oneconfig-ui = { group = "org.polyfrost.oneconfig", name = "ui", version.ref = "oneconfig" }
+polycompose-core = { group = "org.polyfrost", name = "polycompose-core", version.ref = "polycompose" }
 fabric-api = { group = "net.fabricmc.fabric-api", name = "fabric-api", version.ref = "fabric-api" }
 fabric-kotlin = { group = "net.fabricmc", name = "fabric-language-kotlin", version.ref = "fabric-kotlin" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
@@ -119,6 +133,7 @@ iris = { group = "maven.modrinth", name = "iris", version.ref = "iris" }
 [plugins]
 fabric-loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric-loom" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 gradleGitProperties = { id = "com.gorylenko.gradle-git-properties", version.ref = "gradleGitProperties" }
 detekt = { id = "dev.detekt", version.ref = "detekt" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }

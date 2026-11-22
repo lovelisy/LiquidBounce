@@ -28,4 +28,17 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            name = "Polyfrost Releases"
+            url = uri("https://repo.polyfrost.org/releases")
+        }
+        maven {
+            name = "Polyfrost Snapshots"
+            url = uri("https://repo.polyfrost.org/snapshots")
+        }
+    }
+}
+
 rootProject.name = "LiquidBounce"
